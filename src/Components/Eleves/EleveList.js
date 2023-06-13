@@ -1,10 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteStudent } from '../reduxs/StudentSlice';
+import { deleteStudent } from '../../Reduxs/StudentSlice';
+// import { deleteStudent } from '../reduxs/StudentSlice';
 
 const StudentList = () => {
     const student = useSelector(state => state.student)
-
     const dispatch = useDispatch()
     const filteredStudent = student.slice(1);
 

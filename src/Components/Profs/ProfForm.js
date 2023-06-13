@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { addProf } from '../../Reduxs/ProfSlice';
 
 const ProfForm = () => {
     const [teacherForm, setTeacherForm] = useState({
@@ -18,7 +19,7 @@ const ProfForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        dispatch(addStudent(teacherForm))
+        dispatch(addProf(teacherForm))
         setTeacherForm({
             id:"",
             nom:"",

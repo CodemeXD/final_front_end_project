@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { deleteFiliere } from '../../Reduxs/FiliereSlice';
 
 const FiliereList = () => {
     const filiere = useSelector(state => state.filiere);

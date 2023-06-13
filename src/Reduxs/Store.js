@@ -6,7 +6,7 @@ import { NoteSlice } from "./NoteSlice";
 import { CoefSlice } from "./CoefSlice";
 import { ProfSlice } from "./ProfSlice";
 
-export default Store = configureStore({
+export const Store = configureStore({
     reducer: {
         student : StudentSlice.reducer,
         filiere : FiliereSlice.reducer,

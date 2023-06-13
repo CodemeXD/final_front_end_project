@@ -20,7 +20,7 @@ const EleveForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(myForm.sexe !== "masculin" && myForm.sexe !== "feminin"){
+        if(studentForm.sexe !== "masculin" && studentForm.sexe !== "feminin"){
             e.stopPropagation();
         } else{
         dispatch(addStudent(studentForm))
