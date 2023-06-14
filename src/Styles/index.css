@@ -1,24 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
 
 body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.logo{
+    font-family: 'Moirai One', cursive;
+}
+
+li, ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+
 .btn-link{
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
 
 .btn-link:hover{
-    color: #83adff;
+    /* color: #83adff; */
+    color: #eae2b7;
     border-left: 3px solid white ;
 }
 
 .navigation{
     height: 100vh;
-    background-color: #071B63;
+    width: 100vh;
+    /* background-color: #071B63; */
+    /* background-color: #137c8b; */
+    /* background-color: #003049; */
+    /* background-color: #b3bbf3; */
+    background-color: #042954;
 }
-li, ul{
-    text-decoration: none;
-    list-style: none;
+
+.navigation .btn-link{
+    color: white;
+}
+.navigation .btn-link i{
+    color: #fdc500;
+}
+
+
+.BtnNavSous{
+    /* background-color: #709ca7; */
+    /* background-color: #c14467; */
+    /* background-color: #fbe697; */
+    /* background-color: #f77f00; */
+    background-color: #051f3e;
+}
+
+.BtnNavSous .btn-link:hover{
+    color: #fdc500;
+}
+
+.enteteNav{
+    background-color: #fdc500;
+    height: 10vh;
 }
