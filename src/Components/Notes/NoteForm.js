@@ -34,6 +34,8 @@ const NoteForm = () => {
 
     return (
         <div>
+            <h2 className='text-center pb-5'>Ajouter une Note</h2>
+
             <form className="row g-3" onSubmit={handleSubmit}>
                 <div className="col form-floating">
                     <input type="number" min={0} className="form-control" id="note" value={noteForm.note} placeholder='0' name='note' onChange={handleChange} required />

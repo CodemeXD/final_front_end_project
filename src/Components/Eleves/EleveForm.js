@@ -20,10 +20,12 @@ const EleveForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(studentForm.sexe !== "masculin" && studentForm.sexe !== "feminin"){
+        if(studentForm.sexe !== "Masculin" && studentForm.sexe !== "Feminin"){
             e.stopPropagation();
+            alert('Verifiez les informations')
         } else{
         dispatch(addStudent(studentForm))
+        alert('Eleve Ajouté')
         setStudentForm({
             id:"",
             nom:"",
@@ -34,7 +36,9 @@ const EleveForm = () => {
         })}
     }
     return (
-        <div>
+        <div className=''>
+            <h2 className='text-center pb-5'>Ajouter un eleve</h2>
+
             <form className="row g-3" onSubmit={handleSubmit}>
                 <div className="col form-floating">
                     <input type="text" className="form-control" id="nom" value={studentForm.nom} name='nom' onChange={handleChange} required />
@@ -52,15 +56,15 @@ const EleveForm = () => {
                     <input type="number" min='1' className="form-control" id="age" value={studentForm.age} name='age' onChange={handleChange} required />
                     <label htmlFor="age" className="form-label">Age</label>
                 </div>
-                <div className="input-group">
+                <div className="input-group" required>
                     <div className="form-check">
-                        <input className="form-check-input" type="radio" name="masculin" value='Masculin' onChange={handleChange} id="masculin" />
+                        <input className="form-check-input" type="radio" name="sexe" value='Masculin' onChange={handleChange} id="masculin" />
                         <label className="form-check-label" htmlFor="masculin">
                             Masculin
                         </label>
                     </div>
                     <div className="form-check">
-                        <input className="form-check-input" type="radio" name="feminin" value='Feminin' onChange={handleChange} id="feminin" checked />
+                        <input className="form-check-input" type="radio" name="sexe" value='Feminin' onChange={handleChange} id="feminin" />
                         <label className="form-check-label" htmlFor="feminin">
                             Feminin
                         </label>

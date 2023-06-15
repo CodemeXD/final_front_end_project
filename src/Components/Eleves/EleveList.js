@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteStudent } from '../../Reduxs/StudentSlice';
+import BtnDeleteList from '../Boutons/BtnDeleteList';
+import BtnModifList from '../Boutons/BtnModifList';
 // import { deleteStudent } from '../reduxs/StudentSlice';
 
 const StudentList = () => {
@@ -10,8 +12,10 @@ const StudentList = () => {
 
     return (
         <div>
-            <table class="table table-hover table-striped">
-                <thead>
+            <h2 className='text-center pb-5'>Liste des élèves</h2>
+
+            <table class="table text-center table-hover table-striped">
+                <thead className='testtable'>
                     <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nom</th>
@@ -32,8 +36,8 @@ const StudentList = () => {
                             <td>{e.sexe}</td>
                             <td>{e.matricule}</td>
                             <td className='d-flex justify-content-around'>
-                            <button className='btn btn-danger' onClick={() => dispatch(deleteStudent(e.id))}>Supprimer</button>
-                            <button className='btn btn-warning'>Modifier</button>
+                                <BtnModifList/>
+                                <BtnDeleteList actionReducer={deleteStudent(e.id)}/>
                             </td>
                         </tr>
                     )}

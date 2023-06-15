@@ -12,6 +12,8 @@ const FiliereList = () => {
 
     return (
         <div>
+            <h2 className='text-center pb-5'>Liste des Filieres</h2>
+
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>

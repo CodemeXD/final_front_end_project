@@ -10,6 +10,8 @@ const NoteList = () => {
 
     return (
         <div>
+            <h2 className='text-center pb-5'>Liste des Notes</h2>
+
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>
@@ -36,9 +38,10 @@ const NoteList = () => {
                 </tbody>
             </table>
 
-            {/* <div className='text-center pt-5'>
-            Vous avez {filteredStudent.length} Etudiant(s)
-            </div> */}
+            <div className='text-center pt-5'>
+            {(note.length <=0) ? 'Aucune note au tableau' : ''}
+            </div>
+            
         </div>
     );
 }

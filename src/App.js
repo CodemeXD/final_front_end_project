@@ -13,25 +13,33 @@ import NoteForm from './Components/Notes/NoteForm';
 import NoteList from './Components/Notes/NoteList';
 import ProfForm from './Components/Profs/ProfForm';
 import ProfList from './Components/Profs/ProfList';
+import Sidebar from './Components/Navigation/Sidebar';
 
 const App = () => {
   return (
-    <Routes>
-      <Route index element={<Home/>} />
-      <Route path='/'element={<Home/>} />
-      <Route path='/matiereform' element={<MatiereForm/>} />
-      <Route path='/matierelist' element={<MatiereList/>} />
-      <Route path='/studentform' element={<EleveForm/>} />
-      <Route path='/studentlist' element={<StudentList/>} />
-      <Route path='/filiereform' element={<FiliereForm/>} />
-      <Route path='/filierelist' element={<FiliereList/>} />
-      <Route path='/coefform' element={<CoefficientForm/>} />
-      <Route path='/coeflist' element={<CoefficientList/>} />
-      <Route path='/noteform' element={<NoteForm/>} />
-      <Route path='/notelist' element={<NoteList/>} />
-      <Route path='/profform' element={<ProfForm/>} />
-      <Route path='/proflist' element={<ProfList/>} />
-    </Routes>
+      <div className='d-flex'>
+    <div className="col-2">
+      <Sidebar/>
+    </div>
+    <div className="col p-5">
+      <Routes>
+        <Route index element={<Home/>} />
+        <Route path='/'element={<Home/>} />
+        <Route path='/matiereform' element={<MatiereForm/>} />
+        <Route path='/matierelist' element={<MatiereList/>} />
+        <Route path='/studentform' element={<EleveForm/>} />
+        <Route path='/studentlist' element={<StudentList/>} />
+        <Route path='/filiereform' element={<FiliereForm/>} />
+        <Route path='/filierelist' element={<FiliereList/>} />
+        <Route path='/coefform' element={<CoefficientForm/>} />
+        <Route path='/coeflist' element={<CoefficientList/>} />
+        <Route path='/noteform' element={<NoteForm/>} />
+        <Route path='/notelist' element={<NoteList/>} />
+        <Route path='/profform' element={<ProfForm/>} />
+        <Route path='/proflist' element={<ProfList/>} />
+      </Routes>
+    </div>
+    </div>
   );
 }
 

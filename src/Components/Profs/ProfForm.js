@@ -30,6 +30,8 @@ const ProfForm = () => {
 
     return (
         <div>
+            <h2 className='text-center pb-5'>Ajouter un Professeur</h2>
+
             <form className="row g-3" onSubmit={handleSubmit}>
                 <div className="col form-floating">
                     <input type="text" className="form-control" id="nom" value={teacherForm.nom} name='nom' onChange={handleChange} required />

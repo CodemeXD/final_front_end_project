@@ -33,6 +33,8 @@ const CoefficientForm = () => {
 
     return (
         <div>
+            <h2 className='text-center pb-5'>Ajouter un Coefficient</h2>
+
             <form class="row g-3" onSubmit={handleSubmit}>
                 <div class="col form-floating">
                     <input type="number" min={0} class="form-control" id="coefficient" name='coefficient' value={coefficientForm.coefficient} onChange={handleChange} required />

@@ -15,12 +15,12 @@ li, ul{
 }
 
 
-.btn-link{
+.navigation .btn-link{
     text-decoration: none;
     /* color: white; */
 }
 
-.btn-link:hover{
+.navigation .btn-link:hover{
     /* color: #83adff; */
     color: #eae2b7;
     border-left: 3px solid white ;
@@ -59,4 +59,14 @@ li, ul{
 .enteteNav{
     background-color: #fdc500;
     height: 10vh;
+}
+
+
+table thead th{
+    background-color: #042954 !important;
+    color: white !important;
+    font-size: 1.3rem;
+}
+table{
+    border-radius: 30px 10px 0 0 !important;
 }

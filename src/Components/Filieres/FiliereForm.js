@@ -28,6 +28,8 @@ const FiliereForm = () => {
 
     return (
         <div>
+            <h2 className='text-center pb-5'>Ajouter une filière</h2>
+
             <form className="row g-3" onSubmit={handleSubmit}>
                 <div className="col form-floating">
                     <input type="text" className="form-control" id="libelle" value={filiereForm.libelle} name='libelle' onChange={handleChange} required />
