@@ -5,7 +5,7 @@ const BtnDeleteList = ({actionReducer}) => {
     const dispatch= useDispatch()
     return (
         <>
-            <button className='btn btn-danger' onClick={() => dispatch(actionReducer)}><i class="fa-solid fa-trash"></i></button>
+            <button className='btn btn-danger mx-2 shadow' onClick={() => dispatch(actionReducer)}><i class="fa-solid fa-trash"></i></button>
         </>
     );
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteFiliere } from '../../Reduxs/FiliereSlice';
+import BtnDeleteList from '../Boutons/BtnDeleteList';
+import BtnModifList from '../Boutons/BtnModifList';
 
 const FiliereList = () => {
     const filiere = useSelector(state => state.filiere);
@@ -30,8 +32,8 @@ const FiliereList = () => {
                             <td>{e.libelle}</td>
                             <td>{e.description}</td>
                             <td className='d-flex justify-content-around'>
-                            <button className='btn btn-danger' onClick={() => dispatch(deleteFiliere(e.id))}>Supprimer</button>
-                            <button className='btn btn-warning'>Modifier</button>
+                                <BtnModifList/>
+                                <BtnDeleteList actionReducer={deleteFiliere(e.id)}/>
                             </td>
                         </tr>
                     )}

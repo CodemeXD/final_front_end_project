@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteNote } from '../../Reduxs/NoteSlice';
+import BtnModifList from '../Boutons/BtnModifList';
+import BtnDeleteList from '../Boutons/BtnDeleteList';
 
 const NoteList = () => {
 
@@ -30,8 +32,8 @@ const NoteList = () => {
                             <td>{e.matiereId}</td>
                             <td>{e.filiereId}</td>
                             <td className='d-flex justify-content-around'>
-                            <button className='btn btn-danger' onClick={() => dispatch(deleteNote(e.id))}>Supprimer</button>
-                            <button className='btn btn-warning'>Modifier</button>
+                                <BtnModifList />
+                                <BtnDeleteList actionReducer={deleteNote(e.id)}/>
                             </td>
                         </tr>
                     )}

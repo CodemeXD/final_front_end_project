@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCoef } from '../../Reduxs/CoefSlice';
+import BtnDeleteList from '../Boutons/BtnDeleteList';
+import BtnModifList from '../Boutons/BtnModifList';
 
 const CoefficientList = () => {
     const coef = useSelector(state => state.coefficient).slice(1);
@@ -28,8 +30,8 @@ const CoefficientList = () => {
                             <td>{c.matiereId}</td>
                             <td>{c.filiereId}</td>
                             <td className='d-flex justify-content-around'>
-                            <button className='btn btn-danger' onClick={() => dispatch(deleteCoef(c.id))}>Supprimer</button>
-                            <button className='btn btn-warning'>Modifier</button>
+                                <BtnDeleteList actionReducer={deleteCoef(c.id)}/>
+                                <BtnModifList/>
                             </td>
                         </tr>
                     )}

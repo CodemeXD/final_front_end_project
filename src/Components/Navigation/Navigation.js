@@ -5,41 +5,36 @@ const Navigation = () => {
     return (
         <>
             
-            <BtnNav id='nav-eleve'
+            <BtnNav
             titre='Elèves' 
             icone= {<i class="fa-solid fa-graduation-cap"></i>} 
-            lienForm='studentform'
-            lienList='studentlist'
+            lien='student'
             />
-            <BtnNav id='nav-prof'
+            <BtnNav 
             titre='Professeurs' 
             icone= {<i class="fa-solid fa-person-chalkboard"></i>} 
-            lienForm='profform'
-            lienList='proflist'
+            lien='teacher'
             />
-            <BtnNav id='nav-note'
+            <BtnNav 
             titre='Notes' 
             icone= {<i class="fa-solid fa-pen-to-square"></i>} 
-            lienForm='noteform'
-            lienList='notelist'
+            lien='note'
+            
             />
-            <BtnNav id='nav-filiere'
+            <BtnNav 
             titre='Filières' 
             icone= {<i class="fa-solid fa-building-columns"></i>} 
-            lienForm='filiereform'
-            lienList='filierelist'
+            lien='filiere'
             />
-            <BtnNav id='nav-matiere'
+            <BtnNav 
             titre='Matières' 
             icone= {<i class="fa-solid fa-book-bookmark"></i>} 
-            lienForm='matiereform'
-            lienList='matierelist'
+            lien='matiere'
             />
-            <BtnNav id='nav-coef'
+            <BtnNav 
             titre='Coefficients' 
             icone= {<i class="fa-solid fa-calculator"></i>} 
-            lienForm='coefform'
-            lienList='coeflist'
+            lien='coefficient'
             />
         </>
     );

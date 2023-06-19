@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+@import url('./listAndTable.css');
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -22,7 +23,7 @@ li, ul{
 
 .navigation .btn-link:hover{
     /* color: #83adff; */
-    color: #eae2b7;
+    color: #5058f2;
     border-left: 3px solid white ;
 }
 
@@ -33,14 +34,15 @@ li, ul{
     /* background-color: #137c8b; */
     /* background-color: #003049; */
     /* background-color: #b3bbf3; */
-    background-color: #042954;
+    /* background-color: #e9ebed; */
+    background-color: white;
 }
 
 .navigation .btn-link{
-    color: white;
+    color: rgb(98, 98, 98);
 }
 .navigation .btn-link i{
-    color: #fdc500;
+    color: rgb(98, 98, 98);
 }
 
 
@@ -57,7 +59,7 @@ li, ul{
 }
 
 .enteteNav{
-    background-color: #fdc500;
+    /* background-color: white; */
     height: 10vh;
 }
 
@@ -69,4 +71,18 @@ table thead th{
 }
 table{
     border-radius: 30px 10px 0 0 !important;
+}
+
+.app{
+    background-color: #f7f7fa;
+}
+
+.enteteApp{
+    height: 10vh;
+}
+
+.enteteApp .search{
+    border-radius: 20px;
+    background-color: #f7f7fa;
+    width: 19%;
 }

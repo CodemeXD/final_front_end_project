@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteMatiere } from '../../Reduxs/MatiereSlice';
+import BtnModifList from '../Boutons/BtnModifList';
+import BtnDeleteList from '../Boutons/BtnDeleteList';
 
 const MatiereList = () => {
     const matiere = useSelector(state => state.matiere);
@@ -27,8 +29,8 @@ const MatiereList = () => {
                             <th scope="row">{index+1}</th>
                             <td>{e.libelle}</td>
                             <td className='d-flex justify-content-around'>
-                            <button className='btn btn-danger' onClick={() => dispatch(deleteMatiere(e.id))}>Supprimer</button>
-                            <button className='btn btn-warning'>Modifier</button>
+                                <BtnModifList/>
+                                <BtnDeleteList actionReducer={deleteMatiere(e.id)}/>
                             </td>
                         </tr>
                     )}

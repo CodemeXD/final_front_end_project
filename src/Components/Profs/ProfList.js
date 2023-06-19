@@ -1,6 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteProf } from '../../Reduxs/ProfSlice';
+import BtnModifList from '../Boutons/BtnModifList';
+import BtnDeleteList from '../Boutons/BtnDeleteList';
 
 const ProfList = () => {
     const prof = useSelector(state => state.professeur).slice(1);
@@ -28,8 +30,8 @@ const ProfList = () => {
                             <td>{p.prenom}</td>
                             <td>{p.email}</td>
                             <td className='d-flex justify-content-around'>
-                            <button className='btn btn-danger' onClick={() => dispatch(deleteProf(p.id))}>Supprimer</button>
-                            <button className='btn btn-warning'>Modifier</button>
+                                <BtnModifList/>
+                                <BtnDeleteList actionReducer={deleteProf(p.id)}/>
                             </td>
                         </tr>
                     )}

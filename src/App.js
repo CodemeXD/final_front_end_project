@@ -1,19 +1,14 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
-import EleveForm from './Components/Eleves/EleveForm';
-import StudentList from './Components/Eleves/EleveList';
-import FiliereForm from './Components/Filieres/FiliereForm';
-import FiliereList from './Components/Filieres/FiliereList';
-import MatiereForm from './Components/Matieres/MatiereForm';
-import MatiereList from './Components/Matieres/MatiereList';
-import CoefficientForm from './Components/Coefficients/CoefficientForm';
-import CoefficientList from './Components/Coefficients/CoefficientList';
-import NoteForm from './Components/Notes/NoteForm';
-import NoteList from './Components/Notes/NoteList';
-import ProfForm from './Components/Profs/ProfForm';
-import ProfList from './Components/Profs/ProfList';
 import Sidebar from './Components/Navigation/Sidebar';
+import StudentsPage from './Pages/StudentsPage';
+import CoefPage from './Pages/CoefPage';
+import FilieresPage from './Pages/FilieresPage';
+import MatieresPage from './Pages/MatieresPage';
+import NotesPage from './Pages/NotesPage';
+import TeachersPage from './Pages/TeachersPage';
+import Header from './Components/Navigation/Header';
 
 const App = () => {
   return (
@@ -21,8 +16,26 @@ const App = () => {
     <div className="col-2">
       <Sidebar/>
     </div>
-    <div className="col p-5">
-      <Routes>
+    <div className="col app">
+      <div className='enteteApp mb-4 bg-white'>
+        <Header/>
+      </div>
+      <div className='px-5 mt-5'>
+        <Routes>
+          <Route index element={<Home/>} />
+          <Route path='/'element={<Home/>} />
+          <Route path='/student' element={<StudentsPage/>} />
+          <Route path='/coefficient' element={<CoefPage/>} />
+          <Route path='/filiere' element={<FilieresPage/>} />
+          <Route path='/matiere' element={<MatieresPage/>} />
+          <Route path='/note' element={<NotesPage/>} />
+          <Route path='/teacher' element={<TeachersPage/>} />
+        </Routes>
+      </div>
+
+
+
+      {/* <Routes>
         <Route index element={<Home/>} />
         <Route path='/'element={<Home/>} />
         <Route path='/matiereform' element={<MatiereForm/>} />
@@ -37,7 +50,7 @@ const App = () => {
         <Route path='/notelist' element={<NoteList/>} />
         <Route path='/profform' element={<ProfForm/>} />
         <Route path='/proflist' element={<ProfList/>} />
-      </Routes>
+      </Routes> */}
     </div>
     </div>
   );
