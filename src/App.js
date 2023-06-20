@@ -9,6 +9,7 @@ import MatieresPage from './Pages/MatieresPage';
 import NotesPage from './Pages/NotesPage';
 import TeachersPage from './Pages/TeachersPage';
 import Header from './Components/Navigation/Header';
+import EleveUpdate from './Components/Eleves/EleveUpdate';
 
 const App = () => {
   return (
@@ -24,7 +25,9 @@ const App = () => {
         <Routes>
           <Route index element={<Home/>} />
           <Route path='/'element={<Home/>} />
-          <Route path='/student' element={<StudentsPage/>} />
+          <Route path='student' element={<StudentsPage/>} >
+            <Route path=':id' element={<EleveUpdate/>}/>
+          </Route>
           <Route path='/coefficient' element={<CoefPage/>} />
           <Route path='/filiere' element={<FilieresPage/>} />
           <Route path='/matiere' element={<MatieresPage/>} />

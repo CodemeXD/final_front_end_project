@@ -84,5 +84,10 @@ table{
 .enteteApp .search{
     border-radius: 20px;
     background-color: #f7f7fa;
-    width: 19%;
+    width: 25%;
+}
+
+.search input{
+    background-color: #f7f7fa;
+    border: none !important;
 }

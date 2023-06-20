@@ -21,7 +21,15 @@ export const StudentSlice = createSlice({
             return state;
         },
         modifStudent:(state, action) => {
-            
+            const {id, nom, prenom, age, sexe, matricule} = action.payload;
+            const newStudent = state.find(item => item.id == id);
+            if(newStudent) {
+                newStudent.nom = nom;
+                newStudent.prenom = prenom;
+                newStudent.age = age;
+                newStudent.matricule = matricule;
+                newStudent.sexe = sexe;
+            }
         }
     }
 })

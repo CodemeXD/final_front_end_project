@@ -3,11 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteStudent } from '../../Reduxs/StudentSlice';
 import BtnDeleteList from '../Boutons/BtnDeleteList';
 import BtnModifList from '../Boutons/BtnModifList';
+import { Outlet, useParams } from 'react-router-dom';
 // import { deleteStudent } from '../reduxs/StudentSlice';
 
 const StudentList = () => {
     const student = useSelector(state => state.student).slice(1)
     const dispatch = useDispatch()
+
+    const {id} = useParams()
 
     return (
         <div className='w-100'>
@@ -27,7 +30,7 @@ const StudentList = () => {
                     <li class="list-group-item w-100 border-0 ">{s.sexe}</li>
                     <li class="list-group-item w-100 border-0 ">{s.matricule}</li>
                     <li class="list-group-item w-100 border-0 ">
-                        <BtnModifList/>
+                        <BtnModifList lien={`/student/${s.id}`} />
                         <BtnDeleteList actionReducer={deleteStudent(s.id)}/>
                     </li>
                 </ul>) : 
@@ -38,7 +41,7 @@ const StudentList = () => {
                     <li class="list-group-item w-100 border-0 ">{s.sexe}</li>
                     <li class="list-group-item w-100 border-0 ">{s.matricule}</li>
                     <li class="list-group-item w-100 border-0 ">
-                        <BtnModifList  />
+                        <BtnModifList lien={`/student/${s.id}`} />
                         <BtnDeleteList actionReducer={deleteStudent(s.id)}/>
                     </li>
                 </ul>)}
@@ -46,6 +49,7 @@ const StudentList = () => {
             <div className='text-center pt-5'>
             Vous avez {student.length} Etudiant(s)
             </div>
+            <Outlet/>
         </div>
 
 
