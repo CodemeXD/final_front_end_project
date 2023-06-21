@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import StudentList from '../Components/Eleves/EleveList';
 import EleveForm from '../Components/Eleves/EleveForm';
-import '../Styles/student.css'
+// import '../Styles/student.css'
 
 const StudentsPage = () => {
     const [activeForm, setACtiveForm] = useState(false);

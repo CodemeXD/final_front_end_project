@@ -14,7 +14,7 @@ const StudentList = () => {
 
     return (
         <div className='w-100'>
-            <ul class="list-group tableEntete bg-white fw-bold list-group-horizontal mb-1 shadow">
+            <ul class="list-group tableEntete bg-white fw-bold ligne list-group-horizontal mb-1 shadow">
                 <li class="list-group-item w-100 mb-1 fs-5 border-0">Nom</li>
                 <li class="list-group-item w-100 mb-1 fs-5 border-0">Prenom</li>
                 <li class="list-group-item w-100 mb-1 fs-5 border-0">Age</li>
@@ -50,10 +50,7 @@ const StudentList = () => {
             Vous avez {student.length} Etudiant(s)
             </div>
             <Outlet/>
-        </div>
-
-
-        
+        </div>        
     );
 
 }

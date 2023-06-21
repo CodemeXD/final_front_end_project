@@ -37,8 +37,8 @@ const EleveForm = ({formVisibility}) => {
         formVisibility();
     }
     return (
-        <div className='studentFormGolbal d-flex justify-content-center align-items-center'>
-            <div className='studentFormContainer bg-white col-4 p-5 '>
+        <div className='modalFormGolbal d-flex justify-content-center align-items-center'>
+            <div className='modalFormContainer bg-white col-4 p-5 '>
                 <h2 className='text-center pt-2 pb-5 fw-bold'>Formulaire d'ajout</h2>
                 <div className="container ">
                     <form className="row g-3" onSubmit={handleSubmit}>
