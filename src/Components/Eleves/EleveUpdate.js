@@ -20,10 +20,6 @@ const EleveUpdate = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    // const handleChange = (e) => {
-    //     e.target.value
-    // }
-
     const handleUpdate = (e) => {
         e.preventDefault();
         dispatch(modifStudent({

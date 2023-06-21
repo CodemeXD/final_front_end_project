@@ -1,4 +1,4 @@
-.modalFormGolbal{
+.studentFormGolbal{
     position: fixed;
     left: 0;
     top: 0;
@@ -7,11 +7,11 @@
     height: 100%;
 }
 
-.modalFormContainer{
+.studentFormContainer{
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgb(45, 43, 43);
 }
 
-.modalFormContainer h2{
+.studentFormContainer h2{
     /* text-shadow: 0px 1px 2px rgb(45, 43, 43); */
 }

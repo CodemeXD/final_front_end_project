@@ -4,11 +4,10 @@ import { deleteStudent } from '../../Reduxs/StudentSlice';
 import BtnDeleteList from '../Boutons/BtnDeleteList';
 import BtnModifList from '../Boutons/BtnModifList';
 import { Outlet, useParams } from 'react-router-dom';
-// import { deleteStudent } from '../reduxs/StudentSlice';
 
 const StudentList = () => {
     const student = useSelector(state => state.student).slice(1)
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
     const {id} = useParams()
 
