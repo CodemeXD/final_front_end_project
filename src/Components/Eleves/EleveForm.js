@@ -72,8 +72,8 @@ const EleveForm = ({formVisibility}) => {
                                 </label>
                             </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-around">
-                            <button class="btn btn-primary shadow" type="submit">Ajouter</button>
+                        <div className="col-12 d-flex justify-content-around">
+                            <button className="btn btn-primary shadow" type="submit">Ajouter</button>
                             <button className='btn btn-secondary shadow' onClick={() => !formVisibility()}>Annuler</button>
                         </div>
 

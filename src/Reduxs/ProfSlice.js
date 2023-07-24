@@ -19,7 +19,13 @@ export const ProfSlice = createSlice({
             return state;
         },
         modifProf:(state, action) => {
-            
+            const {id, nom, prenom, email} = action.payload;
+            const newProf = state.find(item => item.id == id);
+            if(newProf) {
+                newProf.nom = nom;
+                newProf.prenom = prenom;
+                newProf.email = email;
+            }
         }
     }
 })

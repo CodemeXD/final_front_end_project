@@ -13,33 +13,33 @@ const StudentList = () => {
 
     return (
         <div className='w-100'>
-            <ul class="list-group tableEntete bg-white fw-bold ligne list-group-horizontal mb-1 shadow">
-                <li class="list-group-item w-100 mb-1 fs-5 border-0">Nom</li>
-                <li class="list-group-item w-100 mb-1 fs-5 border-0">Prenom</li>
-                <li class="list-group-item w-100 mb-1 fs-5 border-0">Age</li>
-                <li class="list-group-item w-100 mb-1 fs-5 border-0">Sexe</li>
-                <li class="list-group-item w-100 mb-1 fs-5 border-0">Matricule</li>
-                <li class="list-group-item w-100 mb-1 fs-5 border-0">Action</li>
+            <ul className="list-group tableEntete bg-white fw-bold ligne list-group-horizontal mb-1 shadow">
+                <li className="list-group-item w-100 mb-1 fs-5 border-0">Nom</li>
+                <li className="list-group-item w-100 mb-1 fs-5 border-0">Prenom</li>
+                <li className="list-group-item w-100 mb-1 fs-5 border-0">Age</li>
+                <li className="list-group-item w-100 mb-1 fs-5 border-0">Sexe</li>
+                <li className="list-group-item w-100 mb-1 fs-5 border-0">Matricule</li>
+                <li className="list-group-item w-100 mb-1 fs-5 border-0">Action</li>
             </ul>
             {student && student.map((s, index) => (index % 2 == 0) ? 
-                ( <ul class="list-group list-group-horizontal ligne shadow mb-1">
-                    <li class="list-group-item w-100  border-0 ">{s.nom}</li>
-                    <li class="list-group-item w-100 border-0 ">{s.prenom}</li>
-                    <li class="list-group-item w-100 border-0 ">{s.age}</li>
-                    <li class="list-group-item w-100 border-0 ">{s.sexe}</li>
-                    <li class="list-group-item w-100 border-0 ">{s.matricule}</li>
-                    <li class="list-group-item w-100 border-0 ">
+                ( <ul className="list-group list-group-horizontal ligne shadow mb-1" key={s.id}>
+                    <li className="list-group-item w-100  border-0 ">{s.nom}</li>
+                    <li className="list-group-item w-100 border-0 ">{s.prenom}</li>
+                    <li className="list-group-item w-100 border-0 ">{s.age}</li>
+                    <li className="list-group-item w-100 border-0 ">{s.sexe}</li>
+                    <li className="list-group-item w-100 border-0 ">{s.matricule}</li>
+                    <li className="list-group-item w-100 border-0 ">
                         <BtnModifList lien={`/student/${s.id}`} />
                         <BtnDeleteList actionReducer={deleteStudent(s.id)}/>
                     </li>
                 </ul>) : 
-                <ul class="list-group list-group-horizontal ligne shadow mb-1">
-                    <li class="list-group-item w-100 border-0 ">{s.nom}</li>
-                    <li class="list-group-item w-100 border-0 ">{s.prenom}</li>
-                    <li class="list-group-item w-100 border-0 ">{s.age}</li>
-                    <li class="list-group-item w-100 border-0 ">{s.sexe}</li>
-                    <li class="list-group-item w-100 border-0 ">{s.matricule}</li>
-                    <li class="list-group-item w-100 border-0 ">
+                <ul className="list-group list-group-horizontal ligne shadow mb-1" key={s.id}>
+                    <li className="list-group-item w-100 border-0 ">{s.nom}</li>
+                    <li className="list-group-item w-100 border-0 ">{s.prenom}</li>
+                    <li className="list-group-item w-100 border-0 ">{s.age}</li>
+                    <li className="list-group-item w-100 border-0 ">{s.sexe}</li>
+                    <li className="list-group-item w-100 border-0 ">{s.matricule}</li>
+                    <li className="list-group-item w-100 border-0 ">
                         <BtnModifList lien={`/student/${s.id}`} />
                         <BtnDeleteList actionReducer={deleteStudent(s.id)}/>
                     </li>

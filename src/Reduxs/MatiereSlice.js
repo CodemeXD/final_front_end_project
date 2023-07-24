@@ -17,7 +17,11 @@ export const MatiereSlice = createSlice({
             return state
         },
         modifMatiere : (state, action) => {
-
+            const {id, libelle} = action.payload;
+            const getMatiere = state.find(item => item.id == id);
+            if(getMatiere){
+                getMatiere.libelle = libelle
+            }
         }
     }
 })

@@ -17,7 +17,14 @@ export const FiliereSlice = createSlice({
             state = state.filter(fil => fil.id !== action.payload)
             return state
         },
-        modifFiliere : (state, action) =>{}
+        modifFiliere : (state, action) =>{
+            const {id, libelle, description} = action.payload;
+            const getFiliere = state.find(item => item.id == id)
+            if(getFiliere){
+                getFiliere.libelle = libelle;
+                getFiliere.description = description;
+            }
+        }
     }
 })
 

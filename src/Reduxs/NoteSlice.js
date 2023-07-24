@@ -16,8 +16,17 @@ export const NoteSlice = createSlice({
         },
         deleteNote: (state, action) => {
             state = state.filter(n => n.id !== action.payload)
+            return state
         },
-        modifNote: (state, action) => {}
+        modifNote: (state, action) => {
+            const {id, matiereId, note, filiereId} = action.payload
+            const getNote = state.find(item => item.id == id)
+            if(getNote){
+                getNote.note = note;
+                getNote.filiereId = filiereId;
+                getNote.matiereId = matiereId;
+            }
+        }
     }
 })
 

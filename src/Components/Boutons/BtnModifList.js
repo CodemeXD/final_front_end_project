@@ -8,7 +8,7 @@ const BtnModifList = (props) => {
     return (
         <>
         <Link to={lien}>
-            <button className='btn btn-warning mx-2 shadow text-white'><i class="fa-solid fa-pen"></i></button>
+            <button className='btn btn-warning mx-2 shadow text-white'><i className="fa-solid fa-pen"></i></button>
         </Link>
         <Outlet/>
         </>

@@ -76,7 +76,7 @@ const EleveUpdate = () => {
                         </div>
                         <div class="col-12 d-flex justify-content-around">
                             <button class="btn btn-primary shadow" type="submit">Modifier</button>
-                            <button className='btn btn-secondary shadow'>Annuler</button>
+                            <button className='btn btn-secondary shadow' >Annuler</button>
                         </div>
 
                     </form>

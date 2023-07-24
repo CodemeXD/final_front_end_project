@@ -19,7 +19,13 @@ export const CoefSlice = createSlice({
             return state;
         },
         modifCoef:(state, action) => {
-            
+            const {id, coefficient, matiereId, filiereId} = action.payload;
+            const getCoef = state.find(item => item.id === id);
+            if(getCoef){
+                getCoef.coefficient = coefficient;
+                getCoef.matiereId = matiereId;
+                getCoef.filiereId = filiereId
+            }
         }
     }
 })

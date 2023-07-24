@@ -44,9 +44,9 @@ const FiliereForm = ({formVisibility}) => {
                         <textarea type="text" className="form-control" id="description" value={filiereForm.description} name='description' onChange={handleChange} required />
                         <label htmlFor="description" className="form-label">Description</label>
                     </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Ajouter</button>
-                        <button class="btn btn-secondary" onClick={() => !formVisibility()} >Annuler</button>
+                    <div className="col-12 d-flex justify-content-around">
+                        <button className="btn btn-primary" type="submit">Ajouter</button>
+                        <button className="btn btn-secondary" onClick={() => formVisibility()} >Annuler</button>
                     </div>
                 </form>
             </div>
