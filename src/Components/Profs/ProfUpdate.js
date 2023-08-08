@@ -31,8 +31,8 @@ const ProfUpdate = ({formVisibility}) => {
 
     return (
         <>
-            <div className='studentFormGolbal d-flex justify-content-center align-items-center'>
-                <div className='studentFormContainer bg-white col-4 p-5 '>
+            <div className='modalFormGolbal d-flex justify-content-center align-items-center'>
+                <div className='modalFormContainer bg-white col-4 p-5 '>
                     <h2 className='text-center pb-5'>Modifier ce Professeur</h2>
                     <form className="row g-3" onSubmit={handleUpdate}>
                         <div className="col-12 form-floating">
